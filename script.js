@@ -1,42 +1,19 @@
-const playerName = "nico";
-const playerPoints = 100;
-const playerHnadome = false;
-const playerFat = "little bit";
+function sayHello() {
+  console.log("Hello my name is C");
+}
 
 /*
-이렇게 사용하는 것은 너무 비효율적이다.
+()가 있다는 건 function이라는 의미이다.이 function에서 C는 argument로
+function을 실행하는 동안 function에 어떤 정보를 보내는 방법이다.
 */
 
-const player = {
-  name: "nico",
-  points: 100,
-  Handsome: false,
-  Fat: true,
-};
-
-console.log(player);
-console.log(player.name);
-console.log(player["name"]); // 둘 다 똑같은 결과물을 보여준다.
-console.log(player.Fat);
-player.Fat = false;
-console.log(player.Fat);
-player.lastName = "KIM";
-player.points = player.points + 15;
-console.log(player);
+alert();
+sayHello();
+sayHello();
+sayHello();
+console.log();
 
 /*
-object(객체)를 사용하는 것이 훨씬 깔끔하다.
-xxx.xx 가 바로 object를 사용하는 방법이다.
-xxx가 object이고 xx가 entity(개체)이다.
-
-player.Fat은 player object 내의 entity를 수정하는
-것이기 때문에 오류가 발생하지 않는다. 
-player = fasle; 처럼 object를 직접 건드려야만 오류가 발생한다.
-
-object를 선언할 때 존재하지 않았던 entity도 이후 추가할 수 있다.
+alert에 값을 주지 않고 실행하면 아무 문구도 없는 경고창이 뜬다.
+console.log 값을 주지 않고 실행하면 아무것도 출력하지 않는다.
 */
-
-/* 
-설명이 필요하지 않은 데이터 리스트들은 array로,
- 설명이 필요한 정보가 담긴 데이터 리스트들은 object로!
- */
