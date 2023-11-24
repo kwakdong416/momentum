@@ -1,27 +1,34 @@
-const amIFat = true;
-console.log(amIFat);
-/* 
-boolean 표현방식은 true와 fasle로만 대상을 표현한다.
-true와 false에는 ''를  사욜하지 않는다.
-사용자가 로그인했는 지를 판단하거나 할 때 유용하다.
-*/
+const mon = "mon";
+const tue = "tue";
+const wed = "wed";
+const thu = "thu";
+const fri = "fri";
+const sat = "sat";
+const sun = "sun";
 
-const amINull = null;
-console.log(amINull);
+let daysOfWeek = mon + tue + wed + thu + fri + sat;
 
-/*
-null이라는 값도 존재하는데 아무런 값이 존재하지 않음을 의미한다.
-null과 false 는 다른 것이므로 헷갈리면 안 된다. false는 값이 존재하는 것이다.
-null은 자연적으로 발생하지 않고 우리가 값이 없다는 걸 확실히 할 때만 사용한다.
-*/
-
-let something;
-console.log(something);
-
-something = "I got something.";
-console.log(something, amINull);
+console.log(daysOfWeek);
 
 /*
-변수를 선언한 후 값을 대입하지 않으면 undefined 즉 정의되지 않았다고 뜬다.
-true , false , null , undefined 모두 문자가 아니라 타입일 뿐이다.
+위와 같은 방식은 번잡한 데다가 쓸모도 없다.
 */
+
+daysOfWeek = [mon, tue, wed, thu, fri, sat, sun];
+const nonsense = [1, 2, "hello", null, true, false];
+console.log(daysOfWeek, nonsense);
+
+console.log(daysOfWeek[4]);
+daysOfWeek.push("holiay");
+console.log(daysOfWeek);
+
+/*
+이런 식으로 배열을 사용하면 훨씬 간편하고 이해하기도 사용하기도 더 쉽다.
+배열에는 null , true , false 등의 타입들도 들어갈 수 있다.
+배열에서 특정 순서의 값도 가져올 수 있어 여러모러 편리하다.
+push를 이용해 배열에 요소를 추가할 수 있다.
+*/
+
+const toBuy = ["porato", "tomato", "banana", "apple"];
+toBuy.push("kiwi");
+console.log(toBuy);
