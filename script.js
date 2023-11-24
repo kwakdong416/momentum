@@ -1,25 +1,27 @@
-const a = 10;
-const b = 7;
-let myName1 = " Nico";
-let myName2 = " Nico";
-
-console.log(a + b);
-console.log(a * b);
-console.log(a / b);
-console.log("hello" + myName);
-
-myName1 = " Nicolas";
-myName2 = " Nicolas";
-console.log("your name is" + myName1);
-console.log("your name is" + myName1);
-
+const amIFat = true;
+console.log(amIFat);
 /* 
-const 말고 let으로도 변수 선언이 가능하다. const는 상수라 값을 변경할 수 없지만
-let은 값을 변경하는 것이 가능하다. const  값을 변경하려고 하면 오류가 난다.
-이를 통해 코드를 작성한 사람의 의도를 파악하는 것이 가능하기 떄문에 유용하다.
-선언할 때만 let이나 const를 사용하는 거지 값을 변경할 떄는 쓰지 않는다.  
+boolean 표현방식은 true와 fasle로만 대상을 표현한다.
+true와 false에는 ''를  사욜하지 않는다.
+사용자가 로그인했는 지를 판단하거나 할 때 유용하다.
+*/
 
-javascript에 처음부터 const와 let 이 있었던 것은 아니다. 원레 var만 존재했었다.
-var는 원한다면 어디서든 변수를 업데이트 할 수 있었기 때문에 실수로 변수를 업데이트 해도
-언어가 문제를 알려주지 않는다. 그래서 최근엔 var를 사용하지 않는 추세이다.
+const amINull = null;
+console.log(amINull);
+
+/*
+null이라는 값도 존재하는데 아무런 값이 존재하지 않음을 의미한다.
+null과 false 는 다른 것이므로 헷갈리면 안 된다. false는 값이 존재하는 것이다.
+null은 자연적으로 발생하지 않고 우리가 값이 없다는 걸 확실히 할 때만 사용한다.
+*/
+
+let something;
+console.log(something);
+
+something = "I got something.";
+console.log(something, amINull);
+
+/*
+변수를 선언한 후 값을 대입하지 않으면 undefined 즉 정의되지 않았다고 뜬다.
+true , false , null , undefined 모두 문자가 아니라 타입일 뿐이다.
 */
