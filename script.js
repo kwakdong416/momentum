@@ -1,34 +1,42 @@
-const mon = "mon";
-const tue = "tue";
-const wed = "wed";
-const thu = "thu";
-const fri = "fri";
-const sat = "sat";
-const sun = "sun";
-
-let daysOfWeek = mon + tue + wed + thu + fri + sat;
-
-console.log(daysOfWeek);
+const playerName = "nico";
+const playerPoints = 100;
+const playerHnadome = false;
+const playerFat = "little bit";
 
 /*
-위와 같은 방식은 번잡한 데다가 쓸모도 없다.
+이렇게 사용하는 것은 너무 비효율적이다.
 */
 
-daysOfWeek = [mon, tue, wed, thu, fri, sat, sun];
-const nonsense = [1, 2, "hello", null, true, false];
-console.log(daysOfWeek, nonsense);
+const player = {
+  name: "nico",
+  points: 100,
+  Handsome: false,
+  Fat: true,
+};
 
-console.log(daysOfWeek[4]);
-daysOfWeek.push("holiay");
-console.log(daysOfWeek);
+console.log(player);
+console.log(player.name);
+console.log(player["name"]); // 둘 다 똑같은 결과물을 보여준다.
+console.log(player.Fat);
+player.Fat = false;
+console.log(player.Fat);
+player.lastName = "KIM";
+player.points = player.points + 15;
+console.log(player);
 
 /*
-이런 식으로 배열을 사용하면 훨씬 간편하고 이해하기도 사용하기도 더 쉽다.
-배열에는 null , true , false 등의 타입들도 들어갈 수 있다.
-배열에서 특정 순서의 값도 가져올 수 있어 여러모러 편리하다.
-push를 이용해 배열에 요소를 추가할 수 있다.
+object(객체)를 사용하는 것이 훨씬 깔끔하다.
+xxx.xx 가 바로 object를 사용하는 방법이다.
+xxx가 object이고 xx가 entity(개체)이다.
+
+player.Fat은 player object 내의 entity를 수정하는
+것이기 때문에 오류가 발생하지 않는다. 
+player = fasle; 처럼 object를 직접 건드려야만 오류가 발생한다.
+
+object를 선언할 때 존재하지 않았던 entity도 이후 추가할 수 있다.
 */
 
-const toBuy = ["porato", "tomato", "banana", "apple"];
-toBuy.push("kiwi");
-console.log(toBuy);
+/* 
+설명이 필요하지 않은 데이터 리스트들은 array로,
+ 설명이 필요한 정보가 담긴 데이터 리스트들은 object로!
+ */
