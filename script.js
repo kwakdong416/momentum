@@ -1,19 +1,39 @@
-function sayHello() {
-  console.log("Hello my name is C");
+function sayHello(nameOfPerson, age) {
+  console.log("Hello my name is " + nameOfPerson + "and I'm " + age);
 }
 
+sayHello("nico", 23);
+sayHello("lynn", 25);
+sayHello("dal", 27);
+
+function plus(a, b) {
+  console.log(a + b);
+}
+
+plus(1, 2);
+plus(10, 20);
+plus(100, 200);
+
 /*
-()가 있다는 건 function이라는 의미이다.이 function에서 C는 argument로
-function을 실행하는 동안 function에 어떤 정보를 보내는 방법이다.
+NaN 은 Not a Number라는 의미이다.
 */
 
-alert();
-sayHello();
-sayHello();
-sayHello();
-console.log();
+function divide(a, b) {
+  console.log(a / b);
+}
 
-/*
-alert에 값을 주지 않고 실행하면 아무 문구도 없는 경고창이 뜬다.
-console.log 값을 주지 않고 실행하면 아무것도 출력하지 않는다.
-*/
+divide(10, 2);
+divide(100, 10);
+divide(1000, 25);
+
+const player = {
+  name: "Nico",
+  age: 23,
+  sayHello: function (otherPersonsName) {
+    console.log("hello! my name is " + otherPersonsName + ".");
+  },
+};
+
+console.log(player.name);
+player.sayHello("lynn");
+player.sayHello("dal");
