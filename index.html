@@ -7,7 +7,13 @@
     <link rel="stylesheet" href="styles.css" />
     <!-- link라고만 쳐도 자동완성에서 고를 수 있다. -->
   </head>
-  <body></body>
+  <body>
+    <h1 autofocus class="hello" id="title">Grab me!</h1>
+    <!-- 
+    원래 없던 autofocus를 추가해주면 javascript에서 console.dir(title);를
+    사용했을 때 autofocus: false; 였던 것이 autofocus: true;가 돼있다.
+    -->
+  </body>
   <script src="script.js"></script>
   <!-- javascript는 주로 파일의 끝단에서 가져온다. -->
 </html>
