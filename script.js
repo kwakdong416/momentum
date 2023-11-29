@@ -1,33 +1,50 @@
 const title = document.getElementById("title");
-console.log(title);
-console.dir(title);
 
-/* 
-console.log(title); 코드는 콘솔에서
-document.getElementById("title");
-를 사용한 것과 동일한 결과물을 만들어낸다.
+const hellos = document.getElementsByClassName("hello");
 
-console.dir(title); 코드는 element를
-더 자세하게 보여준다. (별 차이는 모르겠다.)
+console.log(hellos);
 
-document.getElementsByClassName("title");
-class를 이용하는 방법도 있다.
+/*
+콘솔에서 확인해보면 5개의 <h1> elements로 구성된 배열이 나온다.
+여러개의 elements를 동시에 가져와야 할 때는 getElementsByClassName
+를 사용하는 것이 좋다.다만 xx.xxx 식의 사용은 할 수 없는데 이는
+여러개로 구성된 배열이기 때문이다.
+*/
+
+const title2 = document.getElementsByTagName("h1");
+
+console.log(title2);
+/*
+이렇게 하면 모든 <h1> 태그를 가진 요소를 가져오므로 우리가 원하는 결과가 아니다.
+*/
+
+const title3 = document.querySelector(".hello2 h1");
+
+/* const title3 = document.querySelector(".hello2 h1:first-child");
+    굳이 first-child를 써주지 않아도 첫번째 element 만을 가져온다.
+*/
+const title4 = document.querySelectorAll(".hello2 h1");
+
+console.log(title3);
+console.log(title4);
+
+/*
+querySelector는 css처럼 element를 검색할 수 있게 해준다.
+.hello2 h1 는 hello2라는 class명을 사용하는 태그 내의
+<h1> 태그를 가져오라는 의미이다.
+
+div h1도 같은 결과를 만들어낼 수 있다.
+
+class는 .xx , id는 #xx로 구성된다. 
 */
 
 /*
-javascript는 html element를 가져오긴 
-하지만 html 자체를 그대로 보여주지는 않는다.
-javascript에서 html을 표현하는 object를
-보여줄 뿐이다.
-
-document는 곧 html 문서를 의미한다.
+uerySelector는 .hello2 h1 중 첫번째 element만 가져올 수 있다.
+반면 querySelectorAll는 모든 배열 내 element를 가져올 수 있다.
 */
 
-title.innerText = "I Got You.";
+const title5 = document.querySelector(".hello2 h1");
 
-/*
-이런 식으로 html 내 element를 변경할 수도 있다.
-*/
+title5.innerText = "Hello World!";
 
-console.log(title.id);
-console.log(title.className);
+console.log(title5);

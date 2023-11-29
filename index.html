@@ -8,16 +8,29 @@
     <!-- link라고만 쳐도 자동완성에서 고를 수 있다. -->
   </head>
   <body>
-    <h1 autofocus class="hello" id="title">Grab me!</h1>
-    <!-- 
-    원래 없던 autofocus를 추가해주면 javascript에서 console.dir(title);를
-    사용했을 때 autofocus: false; 였던 것이 autofocus: true;가 돼있다.
+    <h1 class="hello">Grab me!</h1>
+    <h1 class="hello">Grab me!</h1>
+    <h1 class="hello">Grab me!</h1>
+    <h1 class="hello">Grab me!</h1>
+    <h1 class="hello">Grab me!</h1>
+    <!--
+      콘솔에서 확인해보면 null의 innerText를 변경할 수 없다고 뜬다.
+      우리 코드 내의 어떤 부분이 null이라는 의미이다.
+      이는 위에서 id가 아닌 class만을 적용했고 script.js에서는 
+      getElementById만을 이용해 title에 값을 줬기 때문이다.
+
+      이후 script.js에 getElementsByClassName 추가해줬다.
+      다시 콘솔에서 확인해보면 5개의 <h1> elements가 나온다.
     -->
+    <div class="hello2">
+      <h1>Grab you! 1</h1>
+    </div>
+    <div class="hello2">
+      <h1>Grab you! 2</h1>
+    </div>
+    <div class="hello2">
+      <h1>Grab you! 3</h1>
+    </div>
   </body>
   <script src="script.js"></script>
-  <!-- javascript는 주로 파일의 끝단에서 가져온다. -->
 </html>
-
-<!-- 웹페이지에서 우클릭 -> 검사 -> 콘솔을 클릭해 바로 javascript를 사용할 수 있다.
-
-Ctrl + / 혹은 Ctrl + k + c로 일괄 주석처리를 하고 Ctrl + k + u로 일괄 주석해제를 할 수 있다. -->
